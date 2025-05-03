@@ -128,17 +128,17 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 px-4 md:px-6 lg:px-8 max-w-5xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-mono font-bold mb-12 text-pink-400">// projects</h2>
+      <h2 className="text-2xl md:text-3xl font-mono font-bold mb-12 text-accent-pink">// projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group bg-zinc-800/50 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 hover:translate-y-[-5px]"
+            className="group bg-card-bg rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-accent-pink/20 transition-all duration-300 hover:translate-y-[-5px]"
           >
             <div className="relative h-48 w-full">
               <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#131127] via-[#131127]/70 to-transparent"></div>
 
               <div className="absolute top-4 right-4 flex gap-3">
                 {project.github && (
@@ -146,7 +146,7 @@ export default function ProjectsSection() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-zinc-800/80 p-2 rounded-full text-zinc-300 hover:text-pink-400 hover:bg-zinc-700 transition-colors"
+                    className="bg-[#1f1a3a]/80 p-2 rounded-full text-zinc-300 hover:text-accent-pink hover:bg-[#1f1a3a] transition-colors"
                     aria-label="GitHub Repository"
                   >
                     <Github size={16} />
@@ -157,7 +157,7 @@ export default function ProjectsSection() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-zinc-800/80 p-2 rounded-full text-zinc-300 hover:text-pink-400 hover:bg-zinc-700 transition-colors"
+                    className="bg-[#1f1a3a]/80 p-2 rounded-full text-zinc-300 hover:text-accent-pink hover:bg-[#1f1a3a] transition-colors"
                     aria-label="Live Demo"
                   >
                     <ExternalLink size={16} />
@@ -175,7 +175,7 @@ export default function ProjectsSection() {
 
               <div className="flex flex-wrap gap-2">
                 {project.techStack.map((tech, i) => (
-                  <span key={i} className="px-2 py-1 bg-zinc-700/70 text-zinc-300 rounded-full text-xs">
+                  <span key={i} className="px-2 py-1 bg-[#1f1a3a] text-zinc-300 rounded-full text-xs">
                     {tech}
                   </span>
                 ))}

@@ -4,10 +4,10 @@ export default function ContactSection() {
   return (
     <section id="contact" className="py-20 px-4 md:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-mono font-bold mb-4 text-pink-400">// contact</h2>
+        <h2 className="text-2xl md:text-3xl font-mono font-bold mb-4 text-accent-pink">// contact</h2>
         <h3 className="text-3xl font-semibold mb-4 text-zinc-100">Get in touch, say hi.</h3>
         <p className="text-zinc-400 mb-8 max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        Feel free to send me an email! I'm always open to new opportunities and collaborations.
         </p>
 
         <a

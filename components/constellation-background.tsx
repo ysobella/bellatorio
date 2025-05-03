@@ -8,6 +8,8 @@ interface Particle {
   vx: number
   vy: number
   radius: number
+  baseVx: number
+  baseVy: number
 }
 
 export default function ConstellationBackground() {
@@ -16,6 +18,7 @@ export default function ConstellationBackground() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const particlesRef = useRef<Particle[]>([])
   const animationRef = useRef<number>(0)
+  const mouseActiveRef = useRef<boolean>(false)
 
   // Handle resize
   useEffect(() => {
@@ -46,11 +49,18 @@ export default function ConstellationBackground() {
     const particleCount = Math.min(Math.floor((width * height) / 9000), 500) // Adjust density based on screen size
 
     for (let i = 0; i < particleCount; i++) {
+      const baseVx = (Math.random() - 0.5) * 0.2
+      const baseVy = (Math.random() - 0.5) * 0.2
+
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
+        // vx: (Math.random() - 0.5) * 0.5,
+        // vy: (Math.random() - 0.5) * 0.5,
+        vx: baseVx,
+        vy: baseVy,
+        baseVx: baseVx,
+        baseVy: baseVy,
         radius: Math.random() * 2 + 1,
       })
     }
@@ -67,6 +77,12 @@ export default function ConstellationBackground() {
           x: e.clientX - rect.left,
           y: e.clientY - rect.top,
         })
+        mouseActiveRef.current = true
+
+        // Reset mouse active after a delay
+        setTimeout(() => {
+          mouseActiveRef.current = false
+        }, 2000)
       }
     }
 
@@ -111,7 +127,8 @@ export default function ConstellationBackground() {
           }
         }
 
-        // Connect to mouse if nearby
+        // Connect to mouse if nearby and mouse is active
+        if (mouseActiveRef.current) {
         const mouseDistance = Math.sqrt(Math.pow(p1.x - mousePosition.x, 2) + Math.pow(p1.y - mousePosition.y, 2))
 
         if (mouseDistance < 150) {
@@ -124,19 +141,39 @@ export default function ConstellationBackground() {
           p1.vx += Math.cos(angle) * pushStrength
           p1.vy += Math.sin(angle) * pushStrength
         }
+        }
       }
 
       ctx.stroke()
 
       // Draw particles
       for (const particle of particles) {
+        // Add some random movement even when mouse is not active
+        if (!mouseActiveRef.current) {
+          // Slowly return to base velocity
+          particle.vx = particle.vx * 0.98 + particle.baseVx * 0.02
+          particle.vy = particle.vy * 0.98 + particle.baseVy * 0.02
+
+          // Add small random movement
+          particle.vx += (Math.random() - 0.5) * 0.01
+          particle.vy += (Math.random() - 0.5) * 0.01
+        }
+
         // Update position
         particle.x += particle.vx
         particle.y += particle.vy
 
         // Bounce off edges
-        if (particle.x < 0 || particle.x > dimensions.width) particle.vx *= -1
-        if (particle.y < 0 || particle.y > dimensions.height) particle.vy *= -1
+        // if (particle.x < 0 || particle.x > dimensions.width) particle.vx *= -1
+        // if (particle.y < 0 || particle.y > dimensions.height) particle.vy *= -1
+        if (particle.x < 0 || particle.x > dimensions.width) {
+          particle.vx *= -1
+          particle.baseVx *= -1
+        }
+        if (particle.y < 0 || particle.y > dimensions.height) {
+          particle.vy *= -1
+          particle.baseVy *= -1
+        }
 
         // Dampen velocity
         particle.vx *= 0.99

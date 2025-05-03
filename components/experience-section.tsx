@@ -185,19 +185,19 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="py-20 px-4 md:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-mono font-bold mb-12 text-pink-400">// awards & experiences</h2>
+        <h2 className="text-2xl md:text-3xl font-mono font-bold mb-12 text-accent-pink">// awards & experiences</h2>
 
-        <div className="mb-8 border-b border-zinc-800">
+        <div className="mb-8 border-b border-[#1f1a3a]">
           <div className="flex flex-wrap -mb-px">
             {["experience", "competitions", "certifications"].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={cn(
-                  "inline-block py-4 px-4 font-medium text-sm capitalize border-b-2 transition-colors",
+                  "inline-block py-3 px-3 font-medium text-sm capitalize border-b-2 transition-colors",
                   activeTab === tab
-                    ? "border-pink-500 text-pink-400"
-                    : "border-transparent text-zinc-400 hover:text-zinc-300 hover:border-zinc-700",
+                    ? "border-accent-pink text-accent-pink"
+                    : "border-transparent text-zinc-400 hover:text-zinc-300 hover:border-[#1f1a3a]",
                 )}
               >
                 {tab}
@@ -211,19 +211,19 @@ export default function ExperienceSection() {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="bg-zinc-800/50 p-6 rounded-2xl hover:translate-y-[-5px] transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/10"
+                className="bg-card-bg p-6 rounded-2xl hover:translate-y-[-5px] transition-all duration-300 hover:shadow-lg hover:shadow-accent-pink/10"
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-zinc-100">{exp.position}</h3>
-                    <p className="text-pink-400">{exp.company}</p>
+                    <p className="text-accent-pink">{exp.company}</p>
                   </div>
                   <span className="text-zinc-500 text-sm mt-2 md:mt-0 font-mono">{exp.date}</span>
                 </div>
                 <ul className="space-y-2 text-zinc-300">
                   {exp.description.map((item, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="text-pink-400 mr-2">▹</span>
+                      <span className="text-accent-pink mr-2">▹</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -234,17 +234,17 @@ export default function ExperienceSection() {
         )}
 
         {activeTab === "competitions" && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {competitions.map((comp, index) => (
               <div
                 key={index}
-                className="group bg-zinc-800/50 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300"
+                className="group bg-card-bg rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-accent-pink/20 transition-all duration-300"
               >
                 <div className="relative h-48 w-full">
                   <Image src={comp.image || "/placeholder.svg"} alt={comp.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#131127] via-[#131127]/70 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4">
-                    <p className="text-pink-400 text-sm">
+                    <p className="text-accent-pink text-sm">
                       {comp.year} • {comp.position}
                     </p>
                     <h3 className="text-xl font-semibold text-zinc-100">{comp.title}</h3>
@@ -259,17 +259,17 @@ export default function ExperienceSection() {
         )}
 
         {activeTab === "certifications" && (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="group bg-zinc-800/50 rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-pink-500/20 transition-all duration-300 hover:translate-y-[-5px]"
+                className="group bg-card-bg rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-accent-pink/20 transition-all duration-300 hover:translate-y-[-5px]"
               >
                 <div className="relative h-48 w-full">
                   <Image src={cert.image || "/placeholder.svg"} alt={cert.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#131127] via-[#131127]/70 to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-3">
-                    <p className="text-pink-400 text-xs font-medium">
+                    <p className="text-accent-pink text-xs font-medium">
                       {cert.organization} • {cert.date}
                     </p>
                     <h3 className="text-sm font-semibold text-zinc-100">{cert.title}</h3>

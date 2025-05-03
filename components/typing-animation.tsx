@@ -51,11 +51,11 @@ export default function TypingAnimation({
   }
 
   return (
-    <span className="text-xl md:text-2xl font-mono font-medium text-pink-400">
+    <span className="text-xl md:text-2xl font-mono font-medium text-accent-pink">
       I am a{" "}
       <span className="relative font-mono">
         {text}
-        <span className="absolute right-[-4px] top-0 h-full w-[2px] bg-pink-400 animate-blink"></span>
+        <span className="absolute right-[-4px] top-0 h-full w-[2px] bg-accent-pink animate-blink"></span>
       </span>
     </span>
   )

@@ -32,15 +32,16 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a
-                  href="/resume.pdf"
-                  className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-pink-500 text-pink-400 hover:bg-pink-500/10 transition-colors font-medium"
+                  href="/Resume - Ysobella Torio.pdf"
+                  download
+                  className="flex items-center gap-2 px-6 py-3 rounded-full border-2 border-accent-pink text-accent-pink hover:bg-accent-pink/10 transition-colors font-medium"
                 >
                   <Download size={18} />
                   <span>Resume</span>
                 </a>
                 <a
                   href="mailto:ysobellatorio@gmail.com"
-                  className="flex items-center gap-2 px-6 py-3 text-zinc-300 hover:text-pink-400 transition-colors font-medium"
+                  className="flex items-center gap-2 px-6 py-3 text-zinc-300 hover:text-accent-pink transition-colors font-medium"
                 >
                   <Mail size={18} />
                   <span>Say Hi</span>
@@ -51,7 +52,7 @@ export default function Home() {
                   href="https://github.com/ysobella"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-zinc-400 hover:text-pink-400 transition-colors"
+                  className="p-3 text-zinc-400 hover:text-accent-pink transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="h-5 w-5" />
@@ -60,7 +61,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/ysobella-torio/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-zinc-400 hover:text-pink-400 transition-colors"
+                  className="p-3 text-zinc-400 hover:text-accent-pink transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5" />
@@ -69,7 +70,7 @@ export default function Home() {
                   href="https://www.instagram.com/y.so.bella/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 text-zinc-400 hover:text-pink-400 transition-colors"
+                  className="p-3 text-zinc-400 hover:text-accent-pink transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-5 w-5" />
@@ -77,7 +78,7 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:col-span-2 relative h-80 lg:h-96 w-full max-w-md mx-auto lg:max-w-none">
-              <div className="h-full w-full relative rounded-2xl overflow-hidden border border-zinc-800">
+              <div className="h-full w-full relative rounded-2xl overflow-hidden border border-card-bg">
                 <Image src="\images\atlassian_bella.png" alt="Bella" fill className="object-cover" priority />
               </div>
             </div>
@@ -91,7 +92,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 px-4 md:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-mono font-bold mb-8 text-pink-400">// about me</h2>
+          <h2 className="text-2xl md:text-3xl font-mono font-bold mb-8 text-accent-pink">// about me</h2>
           <div className="prose prose-invert max-w-none space-y-6">
             <p className="text-lg text-zinc-300 leading-relaxed">
               Hi! I'm Ysobella Torio, a 4th-year Computer Science undergraduate at 
@@ -130,7 +131,7 @@ export default function Home() {
       <EasterEgg />
 
       {/* Footer */}
-      <footer className="py-6 px-4 md:px-6 lg:px-8 border-t border-zinc-800">
+      <footer className="py-6 px-4 md:px-6 lg:px-8 border-t border-[#1f1a3a]">
         <div className="max-w-5xl mx-auto text-center text-zinc-500 text-sm">
           <p>© {new Date().getFullYear()} Ysobella Torio. All rights reserved.</p>
         </div>
