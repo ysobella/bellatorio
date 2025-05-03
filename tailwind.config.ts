@@ -24,7 +24,7 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        "dark-blue": "#171923"
+        "dark-blue": "#131127"
       },
       keyframes: {
         "accordion-down": {

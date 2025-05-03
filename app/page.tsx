@@ -23,7 +23,7 @@ export default function Home() {
         <div className="relative z-10 px-4 md:px-6 lg:px-8 max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-3">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-zinc-100">hi! bella here.</h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-zinc-100">hi, bella here.</h1>
               <div className="mb-6">
                 <TypingAnimation phrases={["Founder", "Developer", "Designer", "Dean's Lister", "Student Leader"]} />
               </div>
