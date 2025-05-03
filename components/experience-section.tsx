@@ -234,7 +234,7 @@ export default function ExperienceSection() {
         )}
 
         {activeTab === "competitions" && (
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {competitions.map((comp, index) => (
               <div
                 key={index}
