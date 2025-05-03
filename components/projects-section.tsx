@@ -23,8 +23,6 @@ const projects = [
     description:
       "A drone-powered delivery system designed to provide rapid-response treatment for students experiencing anaphylactic shocks.",
     techStack: ["Figma"],
-    github: "https://github.com",
-    demo: "https://example.com",
     image: "/images/projects/aero.png",
   },
   {
@@ -32,7 +30,7 @@ const projects = [
     description:
       "A social web application that lets pet owners connect with each other, share pet care tips, and find local pet products.",
     techStack: ["Next.js", "Tailwind CSS", "Firebase", "Vercel"],
-    github: "https://github.com",
+    demo: "https://bantaybuddy.vercel.app/",
     image: "/images/projects/bb.png",
   },
   {
@@ -40,7 +38,7 @@ const projects = [
     description:
       "A mobile application that helps users find the best public transportation routes in Metro Manila, Philippines.",
     techStack: ["Figma"],
-    demo: "https://example.com",
+    demo: "https://www.figma.com/proto/iJUcqGQB2nMpHCRjUEKq2N/STHCIUX-Final-Prototype?node-id=597-21880&p=f&t=G0d5tZEgD8cUEfCH-1&scaling=scale-down&content-scaling=fixed&page-id=597%3A17170&starting-point-node-id=597%3A20412&show-proto-sidebar=1",
     image: "/images/projects/pasahero.png",
   },
   {
@@ -48,7 +46,6 @@ const projects = [
     description:
       "An online forum for VALORANT players to connect, share strategies, and find teammates.",
     techStack: ["Javascript", "MongoDB", "HTML", "CSS"],
-    github: "https://github.com",
     image: "/images/projects/spikezone.png",
   },
   {
@@ -56,7 +53,6 @@ const projects = [
     description:
       "An OOP farming game that allows players to buy seeds, prepare land, plant crops, and harvest them.",
     techStack: ["Java"],
-    github: "https://github.com",
     image: "/images/projects/ville.png",
   },
   {
@@ -64,7 +60,7 @@ const projects = [
     description:
       "A program that synthesizes a large image from smaller patches, allowing for seamless texture generation.",
     techStack: ["Python", "OpenCV", "Matplotlib"],
-    github: "https://github.com",
+    github: "https://github.com/ysobella/digimap_image_quilting.git",
     image: "/images/projects/quilting.png",
   },
   {
@@ -72,7 +68,6 @@ const projects = [
     description:
       "A mazebot that uses the A* search algorithm to find the shortest path in a maze.",
     techStack: ["Python"],
-    github: "https://github.com",
     image: "/images/projects/mazebot.png",
   },
   {
@@ -80,7 +75,7 @@ const projects = [
     description:
       "A machine learning model that utilizes Decision Trees and SVMs to analyze the likelihood of an insurance claim based on various factors.",
     techStack: ["Python"],
-    github: "https://github.com",
+    github: "https://github.com/ysobella/csintsy_mc03.git",
     image: "/images/projects/insurance.png",
   },
   {
@@ -88,7 +83,6 @@ const projects = [
     description:
       "A medical diagnostic chatbot specialized in infectious diseases.",
     techStack: ["Prolog"],
-    github: "https://github.com",
     image: "/images/projects/chatbot.png",
   },
   {
@@ -96,7 +90,7 @@ const projects = [
     description:
       "An ancient Indian board game similar to snakes and ladders. It can be played by 2-4 human players or against a pseudo-AI player.",
     techStack: ["C"],
-    github: "https://github.com",
+    github: "https://github.com/ysobella/chutes-and-ladders.git",
     image: "/images/projects/chutes.png",
   },
   {
@@ -104,7 +98,6 @@ const projects = [
     description:
       "A checkers game made with Discrete Structures.",
     techStack: ["C"],
-    github: "https://github.com",
     image: "/images/projects/checkers.png",
   },
   {
@@ -112,7 +105,6 @@ const projects = [
     description:
       "A Pokedex application that allows users to search for Pokémon and view their details.",
     techStack: ["C"],
-    github: "https://github.com",
     image: "/images/projects/pokedex.png",
   },
   {
@@ -120,7 +112,6 @@ const projects = [
     description:
       "A monthly tax calculator that computes the income tax, SSS, PhilHealth, and Pag-IBIG contributions based on the user's salary.",
     techStack: ["C"],
-    github: "https://github.com",
     image: "/images/projects/tax.png",
   },
 ]

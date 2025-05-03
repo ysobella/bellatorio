@@ -6,7 +6,7 @@ import ProjectsSection from "@/components/projects-section"
 import ContactSection from "@/components/contact-section"
 import Navbar from "@/components/navbar"
 import TypingAnimation from "@/components/typing-animation"
-import EasterEgg from "@/components/easter-egg"
+// import EasterEgg from "@/components/easter-egg"
 import ConstellationBackground from "@/components/constellation-background"
 
 export default function Home() {
@@ -128,10 +128,10 @@ export default function Home() {
       <ContactSection />
 
       {/* Easter Egg */}
-      <EasterEgg />
+      {/* <EasterEgg /> */}
 
       {/* Footer */}
-      <footer className="py-6 px-4 md:px-6 lg:px-8 border-t border-[#1f1a3a]">
+      <footer className="py-6 px-4 md:px-6 lg:px-8 border-t border-[#1f1a3a] bg-dark-blue">
         <div className="max-w-5xl mx-auto text-center text-zinc-500 text-sm">
           <p>© {new Date().getFullYear()} Ysobella Torio. All rights reserved.</p>
         </div>

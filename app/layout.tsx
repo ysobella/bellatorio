@@ -2,10 +2,12 @@ import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { Nunito } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { TabTitleManager } from "@/components/TabTitleManager" 
 
 const inter = Inter({ subsets: ["latin"] })
+const nunito = Nunito({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Bella Torio",
@@ -26,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <TabTitleManager />
           {children}
