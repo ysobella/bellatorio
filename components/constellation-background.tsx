@@ -69,26 +69,63 @@ export default function ConstellationBackground() {
   }
 
   // Handle mouse movement
+  // useEffect(() => {
+  //   const handleMouseMove = (e: MouseEvent) => {
+  //     if (canvasRef.current) {
+  //       const rect = canvasRef.current.getBoundingClientRect()
+  //       setMousePosition({
+  //         x: e.clientX - rect.left,
+  //         y: e.clientY - rect.top,
+  //       })
+  //       mouseActiveRef.current = true
+
+  //       // Reset mouse active after a delay
+  //       setTimeout(() => {
+  //         mouseActiveRef.current = false
+  //       }, 2000)
+  //     }
+  //   }
+
+  //   window.addEventListener("mousemove", handleMouseMove)
+  //   return () => window.removeEventListener("mousemove", handleMouseMove)
+  // }, [])
+
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const updatePosition = (x: number, y: number) => {
       if (canvasRef.current) {
         const rect = canvasRef.current.getBoundingClientRect()
         setMousePosition({
-          x: e.clientX - rect.left,
-          y: e.clientY - rect.top,
+          x: x - rect.left,
+          y: y - rect.top,
         })
         mouseActiveRef.current = true
-
-        // Reset mouse active after a delay
+  
+        // Reset after a short delay
         setTimeout(() => {
           mouseActiveRef.current = false
         }, 2000)
       }
     }
-
+  
+    const handleMouseMove = (e: MouseEvent) => {
+      updatePosition(e.clientX, e.clientY)
+    }
+  
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        updatePosition(e.touches[0].clientX, e.touches[0].clientY)
+      }
+    }
+  
     window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
+    window.addEventListener("touchmove", handleTouchMove)
+  
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove)
+      window.removeEventListener("touchmove", handleTouchMove)
+    }
   }, [])
+  
 
   // Animation loop
   useEffect(() => {
