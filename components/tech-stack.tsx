@@ -3,6 +3,11 @@ import TechCarousel from "./tech-carousel"
 
 const techCategories = [
   {
+    name: "Product & Project Management",
+    icon: <Code className="h-6 w-6 text-accent-pink" />,
+    technologies: ["Jira", "Notion", "Figma", "Google Analytics", "Trello", "Agile/Scrum"],
+  },
+  {
     name: "Web Development",
     icon: <Code className="h-6 w-6 text-accent-pink" />,
     technologies: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],

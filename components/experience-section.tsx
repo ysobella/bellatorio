@@ -6,9 +6,30 @@ import Image from "next/image"
 // Experience Data
 const experiences = [
   {
+    company: "Better Future Ventures, Inc. (\"Moongig\")",
+    position: "Junior Product Manager",
+    date: "Jun 2025 - Apr 2026",
+    description: [
+      "Owned end-to-end product management for a two-sided healthcare staffing marketplace, scaling the platform from 6,000 to 24,000 healthcare professionals and 72 partner providers.",
+      "Led a cross-functional team of ~10 (engineers, infrastructure, UI/UX, QA, AI) through a full product development process built from the ground up.",
+      "Redesigned the platform's discoverability algorithm, increasing post impressions by ~40%.",
+      "Introduced \"Jobs,\" a new hiring pathway taken from prototype to launch in 2 months, adopted by 69 of 72 partner providers.",
+      "Selected as 1 of 5 (from 100 applicants) for the Kaya Founders fellowship; converted to full-time hire based on performance.",
+    ],
+  },
+  {
+    company: "Dala",
+    position: "CEO and Co-founder",
+    date: "May 2025 - Jun 2025",
+    description: [
+      "Led the end-to-end definition, design, and validation of an AI-powered mental health platform, resulting in a functional MVP used by 30+ early users within 3 days of launch.",
+      "Secured a strategic partnership with NowServing to streamline patient-doctor data integration.",    
+    ],
+  },
+  {
     company: "BoxCrib",
     position: "Co-Founder",
-    date: "Feb 2025 - Present",
+    date: "Feb 2025 - May 2025",
     description: [
       "Led platform development from concept to launch, overseeing UI/UX, tech stack selection, and product-market fit.",
       "Acquired 120+ suppliers and Php15,000 worth of sales within 1 month, driving marketplace liquidity and engagement.",
