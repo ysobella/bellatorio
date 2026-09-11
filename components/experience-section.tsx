@@ -7,7 +7,7 @@ import Image from "next/image"
 const experiences = [
   {
     company: "Better Future Ventures, Inc. (\"Moongig\")",
-    position: "Junior Product Manager",
+    position: "Product Manager",
     date: "Jun 2025 - Apr 2026",
     description: [
       "Owned end-to-end product management for a two-sided healthcare staffing marketplace, scaling the platform from 6,000 to 24,000 healthcare professionals and 72 partner providers.",
